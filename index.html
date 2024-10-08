@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Raça de Cachorros</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .breed-buttons {
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .breed-buttons button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color:white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .breed-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-message {
+        color: red;
+        margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .breed-buttons button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Galeria de Raças de Cachorros</h1>
+        <div id="breed-buttons" class="breed-buttons"></div>
+        <div id="loading" class="loading" style="display: none;">Carregando</div>
+        <div id="images" class="ímage-gallery"></div>
+        <div id="error-message" class="error-message" style="display:none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
